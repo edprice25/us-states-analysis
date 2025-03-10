@@ -1,5 +1,5 @@
 # us-states-analysis
-Presents a series of visualizations for older IT workers looking to relocate to more affordable areas in the US. Click on my link below to see a full analysis.
+Presents a series of visualizations for folks looking to relocate to more affordable areas in the US. Click on my link below to see a full analysis.
 
 https://edprice25.github.io/us-states-analysis/
 
