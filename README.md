@@ -3,6 +3,6 @@ Presents a series of visualizations for older IT workers looking to relocate to 
 
 https://edprice25.github.io/us-states-analysis/
 
-All charts created in Jupyter Notebooks using Python (Pandas, Matplotlib). The notebook was also converted to a clean Python script:
+All charts created in Jupyter Notebook using Python (Pandas, Matplotlib). The notebook was also converted to a clean Python script:
 
 jupyter nbconvert --to script US_states_analysis.ipynb
