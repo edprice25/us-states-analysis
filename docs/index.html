@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US States Data Analysis</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #1a365d;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .summary {
+            background: #f8fafc;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 4px solid #1a365d;
+            border-radius: 4px;
+        }
+        .summary-note {
+            font-weight: 600;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .grid-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+        }
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+        .grid-item h3 {
+            color: #1a365d;
+            margin: 0;
+            padding: 15px 15px 5px;
+            font-size: 18px;
+        }
+        .grid-item p {
+            color: #64748b;
+            padding: 0 15px 15px;
+            margin: 0;
+            font-size: 14px;
+        }
+        .chart-container {
+            position: relative;
+            overflow: hidden;
+            cursor: zoom-in;
+            border-top: 1px solid #e2e8f0;
+        }
+        .chart-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .chart-container:hover img {
+            transform: scale(1.5);
+            transform-origin: var(--x) var(--y);
+        }
+        .disclaimer {
+            margin-top: 40px;
+            padding: 15px;
+            background: #f8fafc;
+            border-left: 4px solid #64748b;
+            font-size: 14px;
+            color: #64748b;
+        }
+        @media (max-width: 900px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>US States Data Analysis</h1>
+        <div class="summary">
+            <p>The nine charts below may guide older IT workers looking to relocate to a more affordable area of the US.
+            <div class="summary-note">
+			Hover over any chart to zoom in for a closer look, or click on a chart to view it in full size and then click on an area to zoom in.
+            </div>
+			</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>State Income Tax</h3>
+                <p>Which states have no income tax? Which have the lowest?</p>
+                <div class="chart-container">
+                    <a href="chart-state-income-tax.png" target="_blank">
+                        <img src="chart-state-income-tax.png" alt="State Income Tax Chart">
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <h3>Sales Tax</h3>
+                <p>Which states have no sales tax? Which have the lowest?</p>
+                <div class="chart-container">
+                    <a href="chart-sales-tax.png" target="_blank">
+                        <img src="chart-sales-tax.png" alt="Sales Tax Chart">
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <h3>Property Tax</h3>
+                <p>Which states have the lowest property tax?</p>
+                <div class="chart-container">
+                    <a href="chart-property-tax.png" target="_blank">
+                        <img src="chart-property-tax.png" alt="Property Tax Chart">
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <h3>Population</h3>
+                <p>Which states have the highest population? Is the total and/or older population growing?</p>
+                <div class="chart-container">
+                    <a href="chart-population.png" target="_blank">
+                        <img src="chart-population.png" alt="Population Chart">
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <h3>Tech Jobs</h3>
+                <p>Which states have the most technology jobs? Are the number of jobs growing?</p>
+                <div class="chart-container">
+                    <a href="chart-tech-jobs.png" target="_blank">
+                        <img src="chart-tech-jobs.png" alt="Tech Jobs Chart">
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <h3>Monthly Rent</h3>
+                <p>Which states have the lowest average monthly rent? Are the rent prices stable?</p>
+                <div class="chart-container">
+                    <a href="chart-monthly-rent.png" target="_blank">
+                        <img src="chart-monthly-rent.png" alt="Monthly Rent Chart">
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <h3>Household Annual Salary</h3>
+                <p>Which states have the highest annual household salary? Are the salaries rising?</p>
+                <div class="chart-container">
+                    <a href="chart-household-annual-salary.png" target="_blank">
+                        <img src="chart-household-annual-salary.png" alt="Household Annual Salary Chart">
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <h3>Cost of Living</h3>
+                <p>Which states have the lowest Cost of Living Index? Is the cost of living stable?</p>
+                <div class="chart-container">
+                    <a href="chart-cost-of-living.png" target="_blank">
+                        <img src="chart-cost-of-living.png" alt="Cost of Living Chart">
+                    </a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <h3>Life Satisfaction</h3>
+                <p>Which states have the highest Life Satisfaction Score? Is life satisfaction improving?</p>
+                <div class="chart-container">
+                    <a href="chart-life-satisfaction-score.png" target="_blank">
+                        <img src="chart-life-satisfaction-score.png" alt="Life Satisfaction Score Chart">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            Data source: U.S. Census Bureau, Bureau of Labor Statistics, and Tax Foundation (2024)
+        </div>
+    </div>
+
+    <script>
+        // Add zoom functionality by tracking mouse position
+        document.querySelectorAll('.chart-container').forEach(container => {
+            container.addEventListener('mousemove', function(e) {
+                let rect = e.target.getBoundingClientRect();
+                let x = (e.clientX - rect.left) / rect.width * 100;
+                let y = (e.clientY - rect.top) / rect.height * 100;
+                
+                this.style.setProperty('--x', x + '%');
+                this.style.setProperty('--y', y + '%');
+            });
+        });
+    </script>
+</body>
+</html>
